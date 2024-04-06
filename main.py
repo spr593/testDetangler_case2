@@ -1,16 +1,26 @@
 from feature import featureA
 from feature import testFeatureA
+from feature2 import featureB
+from feature2 import testFeatureB
 import unittest
 
 if __name__=="__main__":
     objA = featureA(7,9)
-    suite = unittest.TestLoader().loadTestsFromTestCase(testFeatureA)
+    suiteA = unittest.TestLoader().loadTestsFromTestCase(testFeatureA)
     runner = unittest.TextTestRunner()
-    result = runner.run(suite)
-
+    result = runner.run(suiteA)
     if result.wasSuccessful():
-        print("Tests passed")
+        print("TestsA passed")
     else:
-        print("Tests Failed")
+        print("TestsA failed")
+
+    objB = featureB (6,3)
+    suiteB = unittest.TestLoader().loadTestsFromTestCase(testFeatureB)
+    runner = unittest.TextTestRunner()
+    result = runner.run(suiteB)
+    if result.wasSuccessful():
+        print("TestsB passed")
+    else:
+        print("TestsB failed")
 
 
