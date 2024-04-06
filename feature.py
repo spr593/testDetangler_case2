@@ -6,11 +6,11 @@ class featureA:
         self.y = y
 
     def action(self):
-        pass
+        return self.x*self.y
 
 class testFeatureA(unittest.TestCase):
     def test_featureA(self):
-        pass
+        self.assertIsInstance(featureA.action(), (int,float), "Not numeric result")
         
 
 if __name__ == "__main__":
