@@ -6,8 +6,8 @@ class featureC:
         self.y = y
 
     def action(self):
-        pass
+        return self.x - self.y
 
 class testFeatureC(unittest.TestCase):
     def test_featureC(self):
-        pass
+        self.assertIsInstance(featureC.action(), (int,float), "Not numeric result")
