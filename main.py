@@ -2,6 +2,8 @@ from feature import featureA
 from feature import testFeatureA
 from feature2 import featureB
 from feature2 import testFeatureB
+from feature3 import featureC
+from feature3 import testFeatureC
 import unittest
 
 if __name__=="__main__":
@@ -22,5 +24,14 @@ if __name__=="__main__":
         print("TestsB passed")
     else:
         print("TestsB failed")
+
+    objC = featureC(2,4)
+    suiteC = unittest.TestLoader().loadTestsFromTestCase(testFeatureC)
+    runner = unittest.TextTestRunner()
+    result = runner.run(suiteC)
+    if result.wasSuccessful():
+        print("TestsC passed")
+    else:
+        print("TestsC failed")
 
 
