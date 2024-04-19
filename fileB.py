@@ -6,7 +6,12 @@ def map_lists(list1: List[int], list2: List[int]) -> List[float]:
         Args:
         Returns:
     """
-
+    result = []
+    total_length = len(list1) + len(list2) - 1
+    for i in range(total_length):
+        dot_product = list1[i] * list2[i]
+        result.append(dot_product + 0.0)
+    return result
 
 class test_conv(unittest.TestCase):
     def test_featureC(self):
