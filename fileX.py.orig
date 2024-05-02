@@ -13,12 +13,6 @@ def map_lists(list1: List[int], list2: List[int]) -> List[float]:
         result.append(dot_product + 0.0)
         return result
 
-<<<<<<< HEAD
-class test_conv(unittest.TestCase):
-    def test_featureC(self):
-        self.assertIsInstance(map_lists.action(), (List[int],List[int]), "Not a convoluted list")
-=======
->>>>>>> 4d60247 (group 2)
 
 if __name__=="__main__":
     print("This is File X")
