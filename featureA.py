@@ -3,8 +3,8 @@ import unittest
 def map_lists(list1: List[int], list2: List[int]) -> List[float]:
     """
         Maps two lists to its convolution.
-        Args:
-        Returns:
+        Args: Two Input Lists
+        Returns: Result list
     """
     result = []
     total_length = len(list1) + len(list2) - 1
