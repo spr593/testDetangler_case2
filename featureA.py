@@ -1,11 +1,17 @@
-from fileB import map_lists, test_conv
+import unittest
 
-if __name__=="__main__":
-    print("This is File A")
+def map_lists(list1: List[int], list2: List[int]) -> List[float]:
+    """
+        Maps two lists to its convolution.
+        Args:
+        Returns:
+    """
+    result = []
+    total_length = len(list1) + len(list2) - 1
+    for i in range(total_length):
+        dot_product = list1[i] * list2[i]
+        result.append(dot_product + 0.0)
+    return result
 
-    #Call map_lists
-    conv = map_lists([1,0], [0,1])
-    for e in conv:
-        print(conv)
-
-    test_conv(map_lists([3,0],[0,-3]))
+if __name__=="main":
+    print('Feature A from branch')
