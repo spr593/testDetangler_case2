@@ -13,5 +13,9 @@ def map_lists(list1: List[int], list2: List[int]) -> List[float]:
         result.append(dot_product + 0.0)
     return result
 
+class test_conv(unittest.TestCase):
+    def test_featureC(self):
+        self.assertIsInstance(map_lists.action(), ([int], [int]), "Not a convoluted list")
+
 if __name__=="main":
     print('Feature A Merge(main, branch-A) Resolved')
