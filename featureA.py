@@ -7,11 +7,11 @@ def map_lists(list1: List[int], list2: List[int]) -> List[float]:
         Returns:
     """
     result = []
-    total_length = len(list1) + len(list2) 
+    total_length = len(list1) + len(list2) - 1
     for i in range(total_length):
-        dot_product = list1[i] + list2[i]
+        dot_product = list1[i] * list2[i]
         result.append(dot_product + 0.0)
     return result
 
 if __name__=="main":
-    print('Feature A from main')
+    print('Feature A Merge(main, branch-A) Resolved')
